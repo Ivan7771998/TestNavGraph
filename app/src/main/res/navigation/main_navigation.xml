@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/searchUserFragment">
+    <fragment
+        android:id="@+id/searchUserFragment"
+        android:name="com.example.testnavgraph.ui.fragments.SearchUserFragment"
+        android:label="fragment_search_user"
+        tools:layout="@layout/fragment_search_user" >
+        <action
+            android:id="@+id/action_searchUserFragment_to_repositoryListFragment"
+            app:destination="@id/repositoryListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repositoryListFragment"
+        android:name="com.example.testnavgraph.ui.fragments.RepositoryListFragment"
+        android:label="fragment_repository_list"
+        tools:layout="@layout/fragment_repository_list" />
+</navigation>
